@@ -1,0 +1,9 @@
+.main {
+	background-color: var(--accent-color);
+	padding: 8px 16px;
+
+	border: none;
+	font-family: unset;
+
+	cursor: pointer;
+}

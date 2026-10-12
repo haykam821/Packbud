@@ -1,0 +1,41 @@
+:root {
+	--background-color: #afafaf;
+
+	--sidebar-background-color: #707070;
+	--sidebar-text-color: #ffffff;
+	
+	--divider-color: #333333;
+	--file-tree-color: #424242;
+	--file-tree-item-color: #505050;
+	--file-tree-item-alternate-color: #767676;
+	--tabs-color: #cccccc;
+
+	--accent-color: #4caf50;
+
+	--sidebar-size: 256px;
+	--spacing: 16px;
+	--active-indicator-size: 8px;
+
+	--primary-font: 'Ubuntu', system-ui, sans-serif;
+	--monospace-font: 'Ubuntu Mono', monospace;
+}
+
+html {
+	background-color: var(--background-color);
+	font-family: var(--primary-font);
+
+	overflow: hidden;
+}
+
+body {
+	margin: 0;
+}
+
+html, body, #root {
+	width: 100%;
+	height: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}

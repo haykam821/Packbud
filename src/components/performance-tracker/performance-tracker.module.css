@@ -1,0 +1,8 @@
+.main {
+	font-family: var(--monospace-font);
+	font-weight: bold;
+
+	font-size: 0.9rem;
+
+	text-align: center;
+}

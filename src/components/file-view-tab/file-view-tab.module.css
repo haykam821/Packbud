@@ -1,0 +1,22 @@
+.button {
+	width: 100%;
+	height: 100%;
+
+	padding: var(--spacing);
+	padding-bottom: calc(var(--spacing) - var(--active-indicator-size));
+
+	border: none;
+	border-bottom: var(--active-indicator-size) solid transparent;
+
+	background: none;
+
+	font-family: unset;
+	color: unset;
+	text-align: unset;
+
+	cursor: pointer;
+}
+
+.button.active {
+	border-bottom-color: var(--accent-color);
+}

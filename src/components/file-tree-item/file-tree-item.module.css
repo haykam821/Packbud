@@ -1,0 +1,43 @@
+.main {
+	width: 100%;
+
+	--background-color: var(--file-tree-item-color);
+	background: linear-gradient(0deg, rgb(0, 0, 0, 0.1), transparent) var(--background-color);
+
+	color: unset;
+	font-size: 0.8rem;
+
+	font-weight: bold;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 100%;
+
+	border: none;
+}
+
+.main:nth-child(2n) {
+	--background-color: var(--file-tree-item-alternate-color);
+}
+
+.button {
+	width: 100%;
+	height: 100%;
+
+	padding: 8px 16px;
+
+	background: none;
+	border: none;
+
+	font-family: unset;
+	color: unset;
+	text-align: unset;
+
+	cursor: pointer;
+}
+
+.active .button {
+	border-left: 8px solid var(--accent-color);
+	padding-left: 8px;
+}

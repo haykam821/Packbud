@@ -15,7 +15,7 @@ export function FileView({ file }: FileViewProps) {
 	return <div className={styles.main}>
 		<ul className={styles.tabs}>
 			{TABS.map(tab => {
-				return <FileViewTab active={tab === activeTab} setActiveTab={setActiveTab} tab={tab} />;
+				return <FileViewTab key={tab.name} active={tab === activeTab} setActiveTab={setActiveTab} tab={tab} />;
 			})}
 		</ul>
 		<div className={styles.panelWrapper}>

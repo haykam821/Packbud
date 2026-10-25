@@ -1,0 +1,10 @@
+.main {
+	font-family: var(--monospace-font);
+
+	color: var(--sidebar-text-color);
+	background-color: var(--sidebar-background-color);
+
+	padding: var(--spacing);
+
+	white-space: pre-wrap;
+}

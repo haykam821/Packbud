@@ -1,12 +1,30 @@
 import { Suspense, useState } from "react";
+import { ErrorBoundary, FallbackProps } from "react-error-boundary";
 
 import { Tab, TABS } from "../../utils/tab.js";
 import { FileData } from "../../utils/workspace/file.js";
+import { DebugOutput } from "../debug-output/debug-output.js";
 import { FileViewTab } from "../file-view-tab/file-view-tab.js";
 import styles from "./file-view.module.css";
 
 interface FileViewProps {
 	file: FileData;
+}
+
+function renderFallback({ error }: FallbackProps) {
+	const messages: string[] = [];
+	messages.push(error + "");
+
+	if (error instanceof Error && error.stack) {
+		messages.push(...error.stack.split("\n"));
+	}
+
+	return <>
+		<span>
+			Failed to show panel
+		</span>
+		<DebugOutput messages={messages} />
+	</>;
 }
 
 export function FileView({ file }: FileViewProps) {
@@ -24,7 +42,9 @@ export function FileView({ file }: FileViewProps) {
 			</span> : <Suspense fallback={<span>
 				Loading...
 			</span>}>
-				{activeTab.component(file)}
+				<ErrorBoundary fallbackRender={renderFallback} resetKeys={[file, activeTab]}>
+					{activeTab.component(file)}
+				</ErrorBoundary>
 			</Suspense>}
 		</div>
 	</div>;

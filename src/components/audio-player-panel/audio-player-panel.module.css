@@ -16,15 +16,6 @@
 	justify-content: center;
 }
 
-.messages {
-	font-family: var(--monospace-font);
-
-	color: var(--sidebar-text-color);
-	background-color: var(--sidebar-background-color);
-
-	padding: var(--spacing);
-}
-
 .attribution {
 	justify-self: flex-end;
 }

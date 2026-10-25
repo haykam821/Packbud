@@ -2,6 +2,7 @@ import { use, useEffect, useState } from "react";
 
 import { useObjectUrl } from "../../utils/use-object-url.js";
 import { FileData } from "../../utils/workspace/file.js";
+import { DebugOutput } from "../debug-output/debug-output.js";
 import styles from "./audio-player-panel.module.css";
 import Worker from "./worker.js?worker";
 
@@ -44,13 +45,7 @@ export function AudioPlayerPanel({ file }: AudioPlayerPanelProps) {
 			{url === null ? <span>
 				Loading audio...
 			</span> : <audio controls src={url} />}
-			{messages.length > 0 ? <div className={styles.messages}>
-				{messages.map((message, index) => {
-					return <div key={index}>
-						{message}
-					</div>;
-				})}
-			</div> : null}
+			<DebugOutput messages={messages} />
 		</div>
 		<div className={styles.attribution}>
 			Uses the <a href="https://vgmstream.org/">vgmstream</a> library

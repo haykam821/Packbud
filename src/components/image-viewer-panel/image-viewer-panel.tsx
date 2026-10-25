@@ -1,7 +1,7 @@
 import { use } from "react";
 
-import { FileData } from "../../utils/file.js";
 import { useObjectUrl } from "../../utils/use-object-url.js";
+import { FileData } from "../../utils/workspace/file.js";
 import styles from "./image-viewer-panel.module.css";
 
 interface ImageViewerPanelProps {

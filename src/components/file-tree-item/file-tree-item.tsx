@@ -1,6 +1,6 @@
 import classNames from "classnames";
 
-import { FileData } from "../../utils/file.js";
+import { FileData } from "../../utils/workspace/file.js";
 import styles from "./file-tree-item.module.css";
 
 interface FileTreeItemProps {

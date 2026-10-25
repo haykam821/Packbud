@@ -1,4 +1,4 @@
-import { FileData } from "../../utils/file.js";
+import { FileData } from "../../utils/workspace/file.js";
 import { FileTreeItem } from "../file-tree-item/file-tree-item.js";
 import styles from "./file-tree.module.css";
 

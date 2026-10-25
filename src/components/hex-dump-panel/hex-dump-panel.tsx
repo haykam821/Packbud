@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { use } from "react";
 import { List, RowComponentProps } from "react-window";
 
-import { FileData } from "../../utils/file.js";
+import { FileData } from "../../utils/workspace/file.js";
 import styles from "./hex-dump-panel.module.css";
 
 const decoder = new TextDecoder("ascii");

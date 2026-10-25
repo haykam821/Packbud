@@ -1,7 +1,7 @@
 import { Suspense, useState } from "react";
 
-import { FileData } from "../../utils/file.js";
 import { Tab, TABS } from "../../utils/tab.js";
+import { FileData } from "../../utils/workspace/file.js";
 import { FileViewTab } from "../file-view-tab/file-view-tab.js";
 import styles from "./file-view.module.css";
 

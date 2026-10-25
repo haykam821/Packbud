@@ -1,7 +1,7 @@
 import { use, useEffect, useState } from "react";
 
-import { FileData } from "../../utils/file.js";
 import { useObjectUrl } from "../../utils/use-object-url.js";
+import { FileData } from "../../utils/workspace/file.js";
 import styles from "./audio-player-panel.module.css";
 import Worker from "./worker.js?worker";
 
